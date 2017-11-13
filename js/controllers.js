@@ -39,10 +39,16 @@ angularRoutingApp.controller('homeController', function($scope,$state,$http,$tim
 			"institucion":"Centro de Bioinformática y Biología Computacional de Colombia (BIOS)"
 		},
 		{
+			"nombre":"Curso: “Fundraising: herramientas y metodología en la búsqueda de financiamento para proyectos de CTeI“",
+			"periodo":"26 Y 27 de Julio 2016",
+			"institucion":"Centro de Bioinformática y Biología Computacional de Colombia (BIOS)"
+		},
+		{
 			"nombre":"Diplomado en computación científica, simulación, Big Data, con una intensidad de 120 horas",
 			"periodo":"octubre de 2016 - Diciembre 2016",
 			"institucion":"Centro de Bioinformática y Biología Computacional de Colombia (BIOS)"
-		},
+		}
+
 	]
 
 
