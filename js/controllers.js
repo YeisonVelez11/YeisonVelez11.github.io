@@ -138,6 +138,7 @@ angularRoutingApp.controller('homeController', function($scope,$state,$http,$tim
 	var timeout=15000;
 
 	$scope.enviarCorreo= function(){
+
 		preload.on();
 		$http({
             method: 'GET',
