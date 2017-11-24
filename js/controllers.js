@@ -56,17 +56,18 @@ angularRoutingApp.controller('homeController', function($scope,$state,$http,$tim
 
 	$scope.testimonios=
 	[
+
+		{
+			"nombre":"Felipe Vega",
+			"testimonio":"Yeison is a very talented software engineer who's always committed to the code duties. Among his multiple technical skills at integrating presentation layer with back-end layer, he has the ability to come up with solutions for complex challenges very quickly. He's always open to suggestions when it comes to receive feedback regarding his code. He has the potential to become a key player at any software development team.",
+			"imagen":"img/felipe.jpg",
+			"cargo":"Senior Ingeniero UX, LiveVox"
+		},
 		{
 			"nombre":"Esteban Correa",
 			"testimonio":" Laboró bajo mi supervisión desde el 4 de mayo del año 2015 en los diferentes aplicativos del centro y su desenvolvimiento resultó muy satisfactorio tanto para mi, como para la empresa que representó",
 			"imagen":"img/esteban.jpg",
 			"cargo":"Director del área de bioingeniería, Centro de Bioinformática y Biología computacional de Colombia (BIOS)"
-		},
-		{
-			"nombre":"Felipe Vega",
-			"testimonio":"testimonio",
-			"imagen":"img/felipe.jpg",
-			"cargo":"cargo"
 		},
 		{
 			"nombre":"Jorge Hernán Franco",
