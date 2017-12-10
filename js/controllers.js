@@ -63,12 +63,14 @@ angularRoutingApp.controller('homeController', function($scope,$state,$http,$tim
 			"imagen":"img/felipe.jpg",
 			"cargo":"Senior Ingeniero UX, LiveVox"
 		},
+
 		{
 			"nombre":"Esteban Correa",
 			"testimonio":" Laboró bajo mi supervisión desde el 4 de mayo del año 2015 en los diferentes aplicativos del centro y su desenvolvimiento resultó muy satisfactorio tanto para mi, como para la empresa que representó",
 			"imagen":"img/esteban.jpg",
 			"cargo":"Director del área de bioingeniería, Centro de Bioinformática y Biología computacional de Colombia (BIOS)"
 		},
+
 		{
 			"nombre":"Jorge Hernán Franco",
 			"testimonio":"Cada vez me siento mas orgulloso de todo el potencial que tienes, sigue  para adelante y que dios te siga bendiciendo",
