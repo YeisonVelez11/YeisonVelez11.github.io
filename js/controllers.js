@@ -4,49 +4,49 @@ angularRoutingApp.controller('homeController', function($scope,$state,$http,$tim
 	$scope.educacion=
 	[
 		{
-			"nombre":"Ingeniería en Sistemas y Telecomunicaciones",
+			"nombre":"Ingeniería en Sistemas y Telecomunicaciones.",
 			"periodo":"2010 - 2015",
-			"institucion":"Universidad de Manizales - Programa de ingeniería en sistemas y telecomunicaciones"
+			"institucion":"Universidad de Manizales - Programa de ingeniería en sistemas y telecomunicaciones."
 		},
 		{
-			"nombre":"Certificado de formación de desarrollo en dispositivos móviles ANDROID 80 horas presenciales",
+			"nombre":"Certificado de formación de desarrollo en dispositivos móviles ANDROID 80 horas presenciales.",
 			"periodo":"Septiembre 2012",
-			"institucion":"people contact"
+			"institucion":"People Contact S.A.S"
 		},
 		{
 			"nombre":"Curso de Diseño y Desarrollo de juegos para dispositivos móviles y android.",
 			"periodo":"28 de diciembre de 2012",
-			"institucion":"Crystal Elearning (Málaga, España)"
+			"institucion":"Crystal Elearning (Málaga, España)."
 		},		
 		{
-			"nombre":"EVENTO CO – CREA Manizales – Colombia ",
+			"nombre":"EVENTO CO – CREA Manizales – Colombia.",
 			"periodo":"4 y 5 de mayo de 2013",
-			"institucion":"ParqueSoft - Manizales"
+			"institucion":"ParqueSoft - Manizales."
 		},	
 		{
-			"nombre":"1er Encuentro Nacional sobre Innovación tecnológica y empresarial",
+			"nombre":"1er Encuentro Nacional sobre Innovación tecnológica y empresarial.",
 			"periodo":"23 al 24 de Febrero de 2012",
-			"institucion":"Universidad Nacional de Manizales"
+			"institucion":"Universidad Nacional de Colombia, sede Manizales - La Nubia."
 		},	
 		{
-			"nombre":"Participación en Seminario de Tecnología de la información y comunicación",
+			"nombre":"Participación en Seminario de Tecnología de la información y comunicación.",
 			"periodo":"10 de Septiembre de 2012",
-			"institucion":"Escuela superior de administración pública"
+			"institucion":"Escuela superior de administración pública ESAP."
 		},	
 		{
-			"nombre":"Curso de “Bioingeniería: explorando datos fisiológicos para aplicaciones interactivas” con una intensidad de 14 horas",
-			"periodo":"31 de Agosto y 1 de Septiembre ",
-			"institucion":"Centro de Bioinformática y Biología Computacional de Colombia (BIOS)"
+			"nombre":"Curso de “Bioingeniería: explorando datos fisiológicos para aplicaciones interactivas” con una intensidad de 14 horas.",
+			"periodo":"31 de Agosto y 1 de Septiembre",
+			"institucion":"Centro de Bioinformática y Biología Computacional de Colombia (BIOS)."
 		},
 		{
-			"nombre":"Curso: “Fundraising: herramientas y metodología en la búsqueda de financiamento para proyectos de CTeI“",
+			"nombre":"Curso: “Fundraising: herramientas y metodología en la búsqueda de financiamiento para proyectos de CTeI.“",
 			"periodo":"26 Y 27 de Julio 2016",
-			"institucion":"Centro de Bioinformática y Biología Computacional de Colombia (BIOS)"
+			"institucion":"Centro de Bioinformática y Biología Computacional de Colombia (BIOS)."
 		},
 		{
-			"nombre":"Diplomado en computación científica, simulación, Big Data, con una intensidad de 120 horas",
+			"nombre":"Diplomado en computación científica, simulación, Big Data, con una intensidad de 120 horas.",
 			"periodo":"octubre de 2016 - Diciembre 2016",
-			"institucion":"Centro de Bioinformática y Biología Computacional de Colombia (BIOS)"
+			"institucion":"Centro de Bioinformática y Biología Computacional de Colombia (BIOS)."
 		}
 
 	]
@@ -89,12 +89,12 @@ angularRoutingApp.controller('homeController', function($scope,$state,$http,$tim
 		{
 			"nombre":"Centro de Bioinformática y Biología Computacional de Colombia",
 			"tiempo": "Mayo de 2015 (trabajo actual)",
-			"funcion": "Desarrollo web (Front-End)"
+			"funcion": "Desarrollo web, front-end en labores de apoyo en la implementación de los aplicativos del centro desde el punto de vista de funcionalidad. Manejo de muro de visualización de datos."
 		},
 		{
 			"nombre":"Tic Solutions Integration",
 			"tiempo": "Diciembre 2015 - Mayo de 2016",
-			"funcion": "Desarrollo web full stack"
+			"funcion": "Desarrollo web full stack y labores de levantamiento de requerimientos y diseño y especificación."
 		}			
 	]
 
