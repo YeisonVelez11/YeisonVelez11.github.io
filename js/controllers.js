@@ -49,6 +49,12 @@ angularRoutingApp.controller('homeController', function($scope,$state,$http,$tim
 			"institucion":"Centro de Bioinformática y Biología Computacional de Colombia (BIOS)."
 		},
 		{
+			"nombre":"Angular 5 y TypeScript - Curso de introducción paso a paso",
+			"periodo":"Abril de 2018",
+			"institucion":"Udemy"
+		},
+
+		{
 			"nombre":"Curso de Angular 6 - Desde cero hasta profesional.",
 			"periodo":"Mayo de 2018",
 			"institucion":"Udemy."
@@ -57,8 +63,17 @@ angularRoutingApp.controller('homeController', function($scope,$state,$http,$tim
 			"nombre":"Aprende Ionic 3 desde cero (antes Ionic 2): Curso inmersivo.",
 			"periodo":"Mayo de 2018",
 			"institucion":"Udemy."
+		},
+		{
+			"nombre":"ionic 2 y ionic 3: Crea apps para Android e iOS desde cero.",
+			"periodo":"Junio de 2018",
+			"institucion":"Udemy."
+		},
+		{
+			"nombre":"Curso de FlexBox desde 0",
+			"periodo":"Julio de 2018",
+			"institucion":"Udemy."
 		}
-
 
 	]
 
@@ -97,16 +112,23 @@ angularRoutingApp.controller('homeController', function($scope,$state,$http,$tim
 			"tiempo": "Agosto de 2014 - Febrero de 2015",
 			"funcion": "Desarrollo web y carga de información a plataforma de gestión de proyectos"
 		},
-		{
-			"nombre":"Centro de Bioinformática y Biología Computacional de Colombia",
-			"tiempo": "Mayo de 2015 (trabajo actual)",
-			"funcion": "Desarrollo web, front-end en labores de apoyo en la implementación de los aplicativos del centro desde el punto de vista de funcionalidad. Manejo de muro de visualización de datos."
-		},
+
 		{
 			"nombre":"Tic Solutions Integration",
 			"tiempo": "Diciembre 2015 - Mayo de 2016",
 			"funcion": "Desarrollo web full stack y labores de levantamiento de requerimientos y diseño y especificación."
-		}			
+		},
+		{
+			"nombre":"Centro de Bioinformática y Biología Computacional de Colombia",
+			"tiempo": "Mayo de 2015 - Mayo de 2018",
+			"funcion": "Desarrollo web, front-end en labores de apoyo en la implementación de los aplicativos del centro desde el punto de vista de funcionalidad. Manejo de muro de visualización de datos."
+		},
+		{
+			"nombre":"MDos4 - Portal de la Vida",
+			"tiempo": "Junio de 2018 (Trabajo actual)",
+			"funcion": "Líder de desarrollo de aplicaciones móviles."
+		}
+
 	]
 
 	$scope.distinciones=
@@ -251,18 +273,29 @@ angularRoutingApp.controller('homeController', function($scope,$state,$http,$tim
 	   },
 	   {
 		"descripcion":"Testigos electorales partido MIRA",
-		"titulo":"Testigos MIRA",
-		"video":"img/testigos.JPG",
-		"imagen":"img/testigoc.png"
+		"titulo":"Testigos MIra",
+		"video":"img/testigoc.JPG",
+		"imagen":"img/testigos.JPG"
 	   },	   
 	   {
 		"descripcion":"Plataforma de transferencia de valores del sector salud",
 		"titulo":"TVSS",
 		"video":"img/TVSSC.JPG",
 		"imagen":"img/TVSS.JPG"
+	   },
+	   {
+		"descripcion":"App para visualizar ofertas,redimir cupones usando la geolocalización",
+		"titulo":"TIN APP",
+		"video":"img/background_tin.jpg",
+		"imagen":"img/icon_tin.jpg"
+	   },
+	   {
+		"descripcion":"Reúne tu información de salud",
+		"titulo":"Midis App Salud",
+		"video":"img/midis_back.jpg",
+		"imagen":"img/icon_midis.jpg"
 	   }
-	  ]
-	
+	 ]
 
 	//indice del contenido
 	$scope.index=-1;
