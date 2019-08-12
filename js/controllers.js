@@ -73,7 +73,13 @@ angularRoutingApp.controller('homeController', function($scope,$state,$http,$tim
 			"nombre":"Curso de FlexBox desde 0",
 			"periodo":"Julio de 2018",
 			"institucion":"Udemy."
+		},
+		{
+			"nombre":"Certified UX Design Foundation",
+			"periodo":"Septiembre - Noviembre 2018",
+			"institucion":"BS Group"
 		}
+
 
 	]
 
@@ -127,7 +133,13 @@ angularRoutingApp.controller('homeController', function($scope,$state,$http,$tim
 			"nombre":"MDos4 - Portal de la Vida",
 			"tiempo": "Junio de 2018 (Trabajo actual)",
 			"funcion": "Líder de desarrollo de aplicaciones móviles."
+		},
+		{
+			"nombre":"Universidad de Manizales",
+			"tiempo": "Octubre (Actualmente)",
+			"funcion": "Apoyo en aplicativos afines a la analítica de datos"
 		}
+
 
 	]
 
@@ -294,6 +306,18 @@ angularRoutingApp.controller('homeController', function($scope,$state,$http,$tim
 		"titulo":"Midis App Salud",
 		"video":"img/midis_back.jpg",
 		"imagen":"img/icon_midis.jpg"
+	   },
+	   {
+		"descripcion":"Sistema de Gestión de Calidad",
+		"titulo":"SGC",
+		"video":"img/sgc_c.JPG",
+		"imagen":"img/sgc.JPG"
+	   },
+	   {
+		"descripcion":"Cultura del servicio para focalizar la mejora a la atención para los usuarios UM",
+		"titulo":"Cultura del servicio",
+		"video":"img/csumanizales_c.JPG",
+		"imagen":"img/csumanizales.JPG"
 	   }
 	 ]
 
