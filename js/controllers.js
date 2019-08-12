@@ -310,8 +310,8 @@ angularRoutingApp.controller('homeController', function($scope,$state,$http,$tim
 	   {
 		"descripcion":"Sistema de Gestión de Calidad",
 		"titulo":"SGC",
-		"video":"img/sgc_c.JPG",
-		"imagen":"img/sgc.JPG"
+		"video":"img/sgc_c.jpg",
+		"imagen":"img/sgc.jpg"
 	   },
 	   {
 		"descripcion":"Cultura del servicio para focalizar la mejora a la atención para los usuarios UM",
