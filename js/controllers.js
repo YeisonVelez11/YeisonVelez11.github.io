@@ -78,7 +78,13 @@ angularRoutingApp.controller('homeController', function($scope,$state,$http,$tim
 			"nombre":"Certified UX Design Foundation",
 			"periodo":"Septiembre - Noviembre 2018",
 			"institucion":"BS Group"
+		},
+		{
+			"nombre":"React Native Expo",
+			"periodo":"Enero 2020",
+			"institucion":"Udemy"
 		}
+
 
 
 	]
@@ -136,10 +142,14 @@ angularRoutingApp.controller('homeController', function($scope,$state,$http,$tim
 		},
 		{
 			"nombre":"Universidad de Manizales",
-			"tiempo": "Octubre (Actualmente)",
+			"tiempo": "Octubre 1 2018 - Octubre 28 2019",
 			"funcion": "Apoyo en aplicativos afines a la analítica de datos"
+		},
+		{
+			"nombre":"CIA TRANSPORTADORA S.A.S",
+			"tiempo": "Octubre 28 2019 - Enero 14 de 2020",
+			"funcion": "Apoyo en app de gestión de containers"
 		}
-
 
 	]
 
