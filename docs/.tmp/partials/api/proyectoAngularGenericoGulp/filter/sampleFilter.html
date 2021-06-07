@@ -1,0 +1,82 @@
+
+
+
+
+<header class="api-profile-header">
+  <h1 class="api-profile-header-heading">sampleFilter</h1>
+  <ol class="api-profile-header-structure naked-list step-list">
+    
+    <li>
+      - filter in module <a href="api/proyectoAngularGenericoGulp">proyectoAngularGenericoGulp</a>
+    </li>
+  </ol>
+</header>
+
+
+
+<div class="api-profile-description">
+  <p>This is a sample filter.</p>
+
+</div>
+
+
+
+
+<div>
+  
+
+  
+  <h2>Usage</h2>
+  <h3>In HTML Template Binding</h3>
+  
+    <pre><code>{{ sampleFilter_expression | sampleFilter}}</code></pre>
+  
+
+  <h3>In JavaScript</h3>
+  <pre><code>$filter(&#39;sampleFilter&#39;)()</code></pre>
+
+  
+  
+  
+
+
+  
+  <h2 id="example">Example</h2><p>
+
+
+<div class="runnable-example"
+    path="examples/example-example1"
+    module="sampleFilterExample"
+    "" animate="false">
+
+  <tabset>
+    
+    <tab heading="index.html">
+      <div class="runnable-example-file" 
+          $ attrName $}="index.html"
+          $ attrName $}="html"
+          $ attrName $}="html">
+        <pre><code>&lt;div ng-controller=&quot;MainCtrl as main&quot;&gt;&#10;  &lt;input ng-model=&quot;main.input&quot; /&gt;&#10;  {{main.input | sampleFilter}}&#10;&lt;/div&gt;</code></pre>
+      </div>
+    </tab>
+    
+    <tab heading="main.js">
+      <div class="runnable-example-file" 
+          $ attrName $}="main.js"
+          $ attrName $}="js"
+          $ attrName $}="js">
+        <pre><code>angular.module(&#39;sampleFilterExample&#39;, [&#39;proyectoAngularGenericoGulp&#39;]).controller(&#39;MainCtrl&#39;, function () {&#10;  this.input = &#39;sample input&#39;;&#10;});</code></pre>
+      </div>
+    </tab>
+    
+  </tabset>
+  <iframe class="runnable-example-frame" src="examples/example-example1/index.html" name="example-example1"></iframe>
+</div>
+
+
+
+</p>
+
+</div>
+
+

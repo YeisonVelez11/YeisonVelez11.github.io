@@ -1,0 +1,26 @@
+{
+  "name": "proyecto_angular_generico_bios",
+  "version": "0.0.0",
+  "authors": [
+    "jonathan ospina garcia <jonathan.ospina@bios.co>"
+  ],
+  "description": "proyecto de angular generico para bios",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "angular": "",
+    "angular-ui-router": "",
+    "angular-sanitize": "",
+    "angular-bootstrap": "",
+    "jquery": "",
+    "jquery-ui": "",
+    "angular-animate": "^1.6.2",
+    "angular-base64": "^2.0.5",
+    "angular-moment": "^1.0.1",
+    "moment": "^2.17.1",
+    "bootstrap": "^3.3.7",
+    "jquery-validation": "^1.16.0",
+    "angular-xeditable": "^0.6.0"
+  }
+}

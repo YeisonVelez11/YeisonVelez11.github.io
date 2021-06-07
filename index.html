@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="es" ng-app='yeison'>
+<html lang="es" ng-app='yeison' xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">>
+
 <head>
+	<meta property="og:image" content="img/yeison2.jpg" />
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -8,46 +10,861 @@
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
 	<!-- CSS -->
-	<link rel="stylesheet" href="css/style.min.css"/>
+	<!-- build:css css/style.min.css -->
+	<link rel="stylesheet" type="text/css" href="css/angular-ui-swiper.css" />
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/ng-scrollable.min.css" />
+
+
+	<!--<link rel="stylesheet" type="text/css" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css" />-->
+
+	<!-- endbuild -->
 </head>
+
 <body>
+	<div id="container" touch-action="none"></div>
 
 
-<!-- VISOR -->
-<div ui-view></div>
-<!-- TERMINA VISOR -->
+	<!-- VISOR -->
+	<div ui-view></div>
+	<!-- TERMINA VISOR -->
 
 
-<!-- LIBRERIAS -->
-<script src="js/nonangularlibs.js"></script>
-<!-- TERMINA LIBRERIAS -->
+	<!-- LIBRERIAS -->
+	<!-- build:nonangularlibs js/nonangularlibs.js -->
+	<!--<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/jquery-ui/jquery-ui.js"></script>
+<!-- endbuild -->
+	<!-- TERMINA LIBRERIAS -->
 
-<!-- PLUGINS DE ANGULAR -->
-<script src="js/angularlibs.js"></script>
+	<!-- PLUGINS DE ANGULAR -->
+	<!-- build:angularlibs js/angularlibs.js -->
 
-<!-- TERMINA PLUGINS DE ANGULAR -->
-
-<!-- SERVICIOS PROYECTO -->
-<script src="js/services.js"></script>
-<!-- TERMINA SERVICIOS PROYECTO -->
-
-<!-- CONTANTES, CONTROLADOR Y APP -->
-<script src="js/contservicesapp.js"></script>
-<!-- TERMINA CONTANTES, CONTROLERS Y APP -->
-
-<!-- CONTROLADORES PROYECTO -->
-<script src="js/controllers.js"></script>
-<!-- TERMINA CONTROLADORES PROYECTO -->
-
-<!-- DIRECTIVAS PROYECTO -->
-<script src="js/directives.js"></script>
-<!-- TERMINA DIRECTIVAS PROYECTO -->
-
-<!-- templates from $templateCache -->
-<script type="text/javascript" src="js/templates.js"></script>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+	<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+	<script src="js/angular-ui-swiper.min.js"></script>
+	<!---<script src="https://maps.google.com/maps/api/js?libraries=places&key=AIzaSyBeUTjybXJSuk9FJavcOQPjYracUfrt4Og"></script>
+	<script src="js/maps.js"></script>
+	<!--<script src="js/ng-map.js"></script>-->
+	<script src="js/ng-scrollable.min.js"></script>
 
 
+	<!--
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeUTjybXJSuk9FJavcOQPjYracUfrt4Og&callback=initMap" async defer></script>
+
+<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+-->
+
+
+	<!-- endbuild -->
+
+	<!-- TERMINA PLUGINS DE ANGULAR -->
+
+	<!-- SERVICIOS PROYECTO -->
+	<!-- build:services js/services.js -->
+	<script src='components/services/utilidades.js'></script>
+	<script src='components/services/validaciones.js'></script>
+
+	<!-- endbuild -->
+	<!-- TERMINA SERVICIOS PROYECTO -->
+
+	<!-- CONTANTES, CONTROLADOR Y APP -->
+	<!-- build:contservicesapp js/contservicesapp.js -->
+	<script src='app/constantes.js'></script>
+	<script src='app/controllers.js'></script>
+	<script src='app/app.js'></script>
+	<!-- endbuild -->
+	<!-- TERMINA CONTANTES, CONTROLERS Y APP -->
+
+	<!-- CONTROLADORES PROYECTO -->
+	<!-- build:controllers js/controllers.js -->
+	<script src='components/controllers/homeController.js'></script>
+	<!-- endbuild -->
+	<!-- TERMINA CONTROLADORES PROYECTO -->
+
+	<!-- DIRECTIVAS PROYECTO -->
+	<!-- build:directives js/directives.js -->
+	<script src='components/directives/directives.js'></script>
+	<!-- endbuild -->
+	<!-- TERMINA DIRECTIVAS PROYECTO -->
+
+	<!-- templates from $templateCache -->
+	<!-- build:templates -->
+	<!-- endbuild -->
+
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js"></script>
+	<script id="vertexShader" type="x-shader/x-vertex">
+		void main() {
+			gl_Position = vec4( position, 1.0 );
+		}
+	</script>
+	<script id="fragmentShader" type="x-shader/x-fragment">
+	  uniform vec2 u_resolution;
+	  uniform vec2 u_mouse;
+	  uniform float u_time;
+	  uniform sampler2D u_noise;
+	  
+	  #define PI 3.141592653589793
+	  #define TAU 6.
+	  
+	  const float multiplier = 25.5;
+	
+	  const float zoomSpeed = 10.;
+	  const int layers = 10;
+	
+	  const int octaves = 5;
+	
+	  vec2 hash2(vec2 p)
+	  {
+		vec2 o = texture2D( u_noise, (p+0.5)/256.0, -100.0 ).xy;
+		return o;
+	  }
+	  
+	  mat2 rotate2d(float _angle){
+		  return mat2(cos(_angle),sin(_angle),
+					  -sin(_angle),cos(_angle));
+	  }
+	  
+	  vec3 hsb2rgb( in vec3 c ){
+		vec3 rgb = clamp(abs(mod(c.x*6.0+vec3(0.0,4.0,2.0),
+								 6.0)-3.0)-1.0,
+						 0.0,
+						 1.0 );
+		rgb = rgb*rgb*(3.0-2.0*rgb);
+		return c.z * mix( vec3(1.0), rgb, c.y);
+	  }
+	  
+	  float hash(vec2 p)
+	  {
+		float o = texture2D( u_noise, (p+0.5)/256.0, -100.0 ).x;
+		return o;
+	  }
+	  float noise(vec2 uv) {
+		vec2 id = floor(uv);
+		vec2 subuv = fract(uv);
+		vec2 u = subuv * subuv * (3. - 2. * subuv);
+		float a = hash(id);
+		float b = hash(id + vec2(1., 0.));
+		float c = hash(id + vec2(0., 1.));
+		float d = hash(id + vec2(1., 1.));
+		return mix(mix(a, b, u.x), mix(c, d, u.x), u.y);
+	  }
+	  float fbm(in vec2 uv) {
+		float s = .0;
+		float m = .0;
+		float a = .5;
+		for(int i = 0; i < octaves; i++) {
+		  s += a * noise(uv);
+		  m += a;
+		  a *= .5;
+		  uv *= 2.;
+		}
+		return s / m;
+	  }
+	  
+	  vec3 domain(vec2 z){
+		return vec3(hsb2rgb(vec3(atan(z.y,z.x)/TAU,1.,1.)));
+	  }
+	  vec3 colour(vec2 z) {
+		  return domain(z);
+	  }
+	  
+	  // The render function is where we render the pattern to be added to the layer
+	  vec3 render(vec2 uv, float scale, vec3 colour) {
+		vec2 id = floor(uv);
+		vec2 subuv = fract(uv);
+		vec2 rand = hash2(id);
+		float bokeh = abs(scale) * 1.;
+		
+		float particle = 0.;
+		
+		if(length(rand) > 1.3) {
+		  vec2 pos = subuv-.5;
+		  float field = length(pos);
+		  particle = smoothstep(.3, 0., field);
+		  particle += smoothstep(.4, 0.34 * bokeh, field);
+		}
+		return vec3(particle*2.);
+	  }
+	  
+	  vec3 renderLayer(int layer, int layers, vec2 uv, inout float opacity, vec3 colour, float n) {
+		vec2 _uv = uv;
+		// Scale
+		// Generating a scale value between zero and 1 based on a mod of u_time
+		// A frequency of 10 dixided by the layer index (10 / layers * layer)
+		float scale = mod((u_time + zoomSpeed / float(layers) * float(layer)) / zoomSpeed, -1.);
+		uv *= 20.; // The initial scale. Increasing this makes the cells smaller and the "speed" apepar faster
+		uv *= scale*scale; // then modifying the overall scale by the generated amount
+		// uv *= 1. + ( ( n*.5 ) * ( length(_uv) ) );
+		// uv += .5*float(layer);
+		uv = rotate2d(u_time / 10.) * uv; // rotarting
+		uv += vec2(25. + sin(u_time*.1)) * float(layer); // ofsetting the UV by an arbitrary amount to make the layer appear different
+	
+		// render
+		vec3 pass = render(uv * multiplier, scale, colour) * .2; // render the pass
+	
+		 // this is the opacity of the layer fading in from the "bottom"
+		opacity = 1. + scale;
+		float _opacity = opacity;
+		
+		// pass += n * .5 * mix(vec3(0., .5, 1.5), vec3(1., .5, 0.), opacity);
+		
+		// This is the opacity of the layer fading out at the top (we want this minimal, hence the smoothstep)
+		float endOpacity = smoothstep(0., 0.4, scale * -1.);
+		opacity += endOpacity;
+	
+		return pass * _opacity * endOpacity;
+	  }
+	
+	  void main() {
+		  vec2 uv = (gl_FragCoord.xy - 0.5 * u_resolution.xy);
+	
+		  if(u_resolution.y < u_resolution.x) {
+			uv /= u_resolution.y;
+		  } else {
+			uv /= u_resolution.x;
+		  }
+	
+		  // uv.y += cos(u_time * .1) * .5;
+		  // uv.x += sin(u_time * .1) * .5;
+		
+		  // float n = fbm(uv * 3. - 2.);
+		  float n = fbm((uv + vec2(sin(u_time*.1), u_time*.1)) * 2. - 2.);
+	
+		  vec3 colour = vec3(0.);
+		  // colour = n * mix(vec3(0., .5, 1.5), vec3(1., .5, -.1), n);
+		  colour = n * mix(vec3(0., .5, 1.5), clamp(vec3(1., .5, .25)*2., 0., 1.), n);
+		  // colour -= n*n*n*n*.4;
+		  // colour += smoothstep(.8, 2.5, sin(n*n*n*8.))*.4;
+	
+		  float opacity = 1.;
+		  float opacity_sum = 1.;
+	
+		  for(int i = 1; i <= layers; i++) {
+			colour += renderLayer(i, layers, uv, opacity, colour, n);
+			opacity_sum += opacity;
+		  }
+	
+		  colour /= opacity_sum;
+	
+		  gl_FragColor = vec4(clamp(colour * 20., 0., 1.),1.0);
+	  }
+	</script>
+	<script>
+		/*
+Most of the stuff in here is just bootstrapping. Essentially it's just
+setting ThreeJS up so that it renders a flat surface upon which to draw 
+the shader. The only thing to see here really is the uniforms sent to 
+the shader. Apart from that all of the magic happens in the HTML view
+under the fragment shader.
+*/
+		let capturing = false;
+
+		let container;
+		let camera, scene, renderer;
+		let uniforms;
+
+		let loader = new THREE.TextureLoader();
+		let texture;
+		loader.setCrossOrigin("anonymous");
+		loader.load(
+			'https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/noise.png',
+			function do_something_with_texture(tex) {
+				texture = tex;
+				texture.wrapS = THREE.RepeatWrapping;
+				texture.wrapT = THREE.RepeatWrapping;
+				texture.minFilter = THREE.LinearFilter;
+				init();
+				animate();
+			}
+		);
+
+		function init() {
+			container = document.getElementById('container');
+
+			camera = new THREE.Camera();
+			camera.position.z = 1;
+
+			scene = new THREE.Scene();
+
+			var geometry = new THREE.PlaneBufferGeometry(2, 2);
+
+			uniforms = {
+				u_time: { type: "f", value: 1.0 },
+				u_resolution: { type: "v2", value: new THREE.Vector2() },
+				u_noise: { type: "t", value: texture },
+				u_mouse: { type: "v2", value: new THREE.Vector2() }
+			};
+
+			var material = new THREE.ShaderMaterial({
+				uniforms: uniforms,
+				vertexShader: document.getElementById('vertexShader').textContent,
+				fragmentShader: document.getElementById('fragmentShader').textContent
+			});
+			material.extensions.derivatives = true;
+
+			var mesh = new THREE.Mesh(geometry, material);
+			scene.add(mesh);
+
+			renderer = new THREE.WebGLRenderer();
+			renderer.setPixelRatio(window.devicePixelRatio);
+
+			container.appendChild(renderer.domElement);
+
+			onWindowResize();
+			window.addEventListener('resize', onWindowResize, false);
+
+			document.addEventListener('pointermove', (e) => {
+				let ratio = window.innerHeight / window.innerWidth;
+				uniforms.u_mouse.value.x = (e.pageX - window.innerWidth / 2) / window.innerWidth / ratio;
+				uniforms.u_mouse.value.y = (e.pageY - window.innerHeight / 2) / window.innerHeight * -1;
+
+				e.preventDefault();
+			});
+		}
+
+		function onWindowResize(event) {
+			renderer.setSize(window.innerWidth, window.innerHeight);
+			uniforms.u_resolution.value.x = renderer.domElement.width;
+			uniforms.u_resolution.value.y = renderer.domElement.height;
+		}
+
+		function animate(delta) {
+			requestAnimationFrame(animate);
+			render(delta);
+		}
+
+
+
+
+
+		try {
+			let capturer = new CCapture({
+				verbose: true,
+				framerate: 60,
+				// motionBlurFrames: 4,
+				quality: 90,
+				format: 'webm',
+				workersPath: 'js/'
+			});
+		}
+		catch (e) {
+
+		}
+
+
+		isCapturing = function (val) {
+			if (val === false && window.capturing === true) {
+				capturer.stop();
+				capturer.save();
+			} else if (val === true && window.capturing === false) {
+				capturer.start();
+			}
+			capturing = val;
+		}
+		toggleCapture = function () {
+			isCapturing(!capturing);
+		}
+
+
+		let then = 0;
+		function render(delta) {
+
+			uniforms.u_time.value = -10000 + delta * 0.0005;
+			renderer.render(scene, camera);
+
+			if (capturing) {
+				capturer.capture(renderer.domElement);
+			}
+		}
+	</script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js"></script>
+	<script id="vertexShader" type="x-shader/x-vertex">
+		void main() {
+			gl_Position = vec4( position, 1.0 );
+		}
+	</script>
+	<script id="fragmentShader" type="x-shader/x-fragment">
+	  uniform vec2 u_resolution;
+	  uniform vec3 u_mouse;
+	  uniform float u_time;
+	  uniform sampler2D u_noise;
+	  uniform sampler2D u_buffer;
+	  uniform sampler2D u_environment;
+	  uniform sampler2D u_texture;
+	  uniform bool u_renderpass;
+	  uniform int u_frame;
+	  
+	  #define PI 3.141592653589793
+	  #define TAU 6.283185307179586
+	  #define rain 1
+	  #define depth 20.
+	  #define velPropagation 1.4
+	  #define pow2(x) (x * x)
+	  
+	  // Holy fuck balls, fresnel!
+	  const float bias = .2;
+	  const float scale = 10.;
+	  const float power = 10.1;
+	  
+	  // blur constants
+	  const float blurMultiplier = 0.95;
+	  const float blurStrength = 2.98;
+	  const int samples = 8;
+	  const float sigma = float(samples) * 0.25;
+	  
+	
+	  vec2 hash2(vec2 p)
+	  {
+		vec2 o = texture2D( u_noise, (p+0.5)/256.0, -100.0 ).xy;
+		return o;
+	  }
+	
+	  float gaussian(vec2 i) {
+		return 1.0 / (2.0 * PI * pow2(sigma)) * exp(-((pow2(i.x) + pow2(i.y)) / (2.0 * pow2(sigma))));
+	  }
+	
+	  vec3 hash33(vec3 p){ 
+	
+		float n = sin(dot(p, vec3(7, 157, 113)));    
+		return fract(vec3(2097152, 262144, 32768)*n); 
+	  }
+	
+	  vec3 blur(sampler2D sp, vec2 uv, vec2 scale) {
+		vec3 col = vec3(0.0);
+		float accum = 0.0;
+		float weight;
+		vec2 offset;
+	
+		for (int x = -samples / 2; x < samples / 2; ++x) {
+			for (int y = -samples / 2; y < samples / 2; ++y) {
+				offset = vec2(x, y);
+				weight = gaussian(offset);
+				col += texture2D(sp, uv + scale * offset).rgb * weight;
+				accum += weight;
+			}
+		}
+	
+		return col / accum;
+	  }
+	  
+	  vec3 hsb2rgb( in vec3 c ){
+		vec3 rgb = clamp(abs(mod(c.x*6.0+vec3(0.0,4.0,2.0),
+								 6.0)-3.0)-1.0,
+						 0.0,
+						 1.0 );
+		rgb = rgb*rgb*(3.0-2.0*rgb);
+		return c.z * mix( vec3(1.0), rgb, c.y);
+	  }
+	  
+	  vec3 domain(vec2 z){
+		return vec3(hsb2rgb(vec3(atan(z.y,z.x)/TAU,1.,1.)));
+	  }
+	  vec3 colour(vec2 z) {
+		  return domain(z);
+	  }
+	  
+	  const float delta = .005;
+	  
+	  
+	  vec4 renderRipples() {
+		vec2 uv = (gl_FragCoord.xy - 0.5 * u_resolution.xy) / min(u_resolution.y, u_resolution.x);
+		vec3 e = vec3(vec2(3.6)/u_resolution.xy,0.);
+		vec2 sample = gl_FragCoord.xy / u_resolution.xy;
+		float ratio = u_resolution.x / u_resolution.y;
+		vec2 mouse = u_mouse.xy - uv;
+		
+		vec4 fragcolour = texture2D(u_buffer, sample);
+		
+		float shade = 0.;
+		
+		// float shade = 1. - smoothstep(.1, .15, length(mouse));
+		if(u_mouse.z == 1.) {
+		  shade = smoothstep(.02 + abs(sin(u_time*10.) * .006), .0, length(mouse)); 
+		}
+		if(mod(u_time, .1) >= .095) {
+		  vec2 hash = hash2(vec2(u_time*2., sin(u_time*10.)))*3.-1.;
+		  shade += smoothstep(.012, .0, length(uv-hash+.5));
+		}
+		// shade -= (smoothstep(.185, .0, length(mouse))-shade)*2.;
+	
+		vec4 texcol = fragcolour;
+	
+		float d = shade * 2.;
+	
+		float t = texture2D(u_buffer, sample-e.zy, 1.).x;
+		float r = texture2D(u_buffer, sample-e.xz, 1.).x;
+		float b = texture2D(u_buffer, sample+e.xz, 1.).x;
+		float l = texture2D(u_buffer, sample+e.zy, 1.).x;
+	
+		// float t = texture2D(u_buffer, sample + vec2(0., -delta*ratio)).x;
+		// float r = texture2D(u_buffer, sample + vec2(delta, 0.)).x;
+		// float b = texture2D(u_buffer, sample + vec2(0., delta*ratio)).x;
+		// float l = texture2D(u_buffer, sample + vec2(-delta, 0.)).x;
+	
+		// fragcolour = (fragcolour + t + r + b + l) / 5.;
+		d += -(texcol.y-.5)*2. + (t + r + b + l - 2.);
+		d *= .99;
+		d *= float(u_frame > 5);
+		d = d*.5+.5;
+	
+		fragcolour = vec4(d, texcol.x, 0, 0);
+		
+		return fragcolour;
+	  }
+	  
+	  
+	  
+	  
+	  //   Naive environment mapping. Pass the reflected vector and pull back the texture position for that ray.
+	  vec3 envMap(vec3 rd, vec3 sn, float scale){
+	
+		// rd.xy -= u_time*.2; // This just sort of compensates for the camera movement
+		// rd.xy -= movement;
+		rd *= 1.; // scale the whole thing down a but from the scaled UVs
+	
+		vec3 col = texture2D(u_environment, rd.xy - .5).rgb*2.;
+		col *= normalize(col);
+		// col *= vec3(1., 1., 1.2);
+		// col *= vec3(hash2(rd.xy).y * .5 + .5);
+	
+		return col;
+	
+	  }
+	  
+	  float bumpMap(vec2 uv, float height, inout vec3 colourmap) {
+		
+		
+		vec3 shade;
+		
+		vec2 sample = gl_FragCoord.xy / u_resolution.xy;
+		sample += uv;
+		vec2 ps = vec2(1.0) / u_resolution.xy;
+		
+		shade = vec3(blur(u_buffer, sample, ps*blurStrength));
+		// shade = texture2D(u_buffer, sample).rgb;
+		// shade = vec3(shade.y * shade.y);
+		
+		return 1. - shade.x * height;
+	  }
+	  float bumpMap(vec2 uv, float height) {
+		vec3 colourmap;
+		return bumpMap(uv, height, colourmap);
+	  }
+	
+	  vec4 renderPass(vec2 uv, inout float distortion) {
+		vec3 surfacePos = vec3(uv, 0.0);
+		vec3 ray = normalize(vec3(uv, 1.));
+		// vec3 lightPos = vec3(cos(u_time / 2.) * 2., sin(u_time / 2.) * 2., -3.);
+		vec3 lightPos = vec3(cos(u_time * .5 + 2.) * 2., 1. + sin(u_time * .5 + 2.) * 2., -3.);
+		vec3 normal = vec3(0., 0., -1);
+	
+		vec2 sampleDistance = vec2(.005, 0.);
+		
+		vec3 colourmap;
+		
+		float fx = bumpMap(sampleDistance.xy, .2);
+		float fy = bumpMap(sampleDistance.yx, .2);
+		float f = bumpMap(vec2(0.), .2, colourmap);
+		
+		distortion = f;
+		
+		fx = (fx-f)/sampleDistance.x;
+		fy = (fy-f)/sampleDistance.x;
+		normal = normalize( normal + vec3(fx, fy, 0) * 0.2 );
+		
+		// Holy fuck balls, fresnel!
+		// specular = max(0.0, min(1.0, bias + scale * (1.0 + length(camPos-sp * surfNormal)) * power));
+		float shade = bias + (scale * pow(1.0 + dot(normalize(surfacePos-vec3(uv, -3.0)), normal), power));
+	
+		vec3 lightV = lightPos - surfacePos;
+		float lightDist = max(length(lightV), 0.001);
+		lightV /= lightDist;
+	
+		vec3 lightColour = vec3(.8, .8, 1.);
+	
+		float shininess = .8;
+		float brightness = 1.;
+	
+		float falloff = 0.1;
+		float attenuation = 1./(1.0 + lightDist*lightDist*falloff);
+	
+		float diffuse = max(dot(normal, lightV), 0.);
+		float specular = pow(max(dot( reflect(-lightV, normal), -ray), 0.), 52.) * shininess;
+		
+		// vec3 tex = texture2D(u_environment, (reflect(vec3(uv, -1.), normal)).xy ).rgb;
+		vec3 reflect_ray = reflect(vec3(uv, 1.), normal * 1.);
+		// The reflect ray is the ray wwe use to determine the reflection.
+		// We use the UV less the movement (to account for "environment") to the surface normal
+		vec3 tex = envMap(reflect_ray, normal, 1.5) * (shade + .5); // Fake environment mapping.
+	
+		vec3 texCol = (vec3(.4, .6, .9) + tex * brightness) * .5;
+		
+		float metalness = (1. - colourmap.x);
+		metalness *= metalness;
+	
+		vec3 colour = (texCol * (diffuse*vec3(1, .97, .92)*2. + 0.5) + lightColour*specular * f * 2. * metalness)*attenuation*1.5;
+		// colour *= 1.5;
+	
+		// return vec4(shade);
+		return vec4(colour, 1.);
+	  }
+	
+	  void main() {
+		
+		vec4 fragcolour = vec4(0);
+		
+		if(u_renderpass) {
+		  fragcolour = renderRipples();
+		} else {
+		  
+		  
+		  vec2 uv = (gl_FragCoord.xy - 0.5 * u_resolution.xy) / min(u_resolution.y, u_resolution.x);
+		  vec2 sample = gl_FragCoord.xy / u_resolution.xy;
+		  // uv.x += sin(u_time*.5);
+		  // sample.x += sin(u_time*.05);
+		  
+		  float distortion;
+		  vec4 reflections = renderPass(uv, distortion);
+		  
+		  vec4 c = texture2D(u_texture, uv*1.5+distortion).rbra;
+		  fragcolour = c * c * c * .4;
+		  fragcolour *= fragcolour; 
+		  fragcolour += (texture2D(u_buffer, sample+.03).x)*.1 - .1;
+		  fragcolour += reflections*.7;
+		  // fragcolour = texture2D(u_buffer, sample + fragcolour.rg * .005);
+		  // // fragcolour = vec4(fragcolour.x * fragcolour.x);
+		}
+	
+		gl_FragColor = fragcolour ;
+	  }
+	</script>
+	<script>
+		/*
+Most of the stuff in here is just bootstrapping. Essentially it's just
+setting ThreeJS up so that it renders a flat surface upon which to draw 
+the shader. The only thing to see here really is the uniforms sent to 
+the shader. Apart from that all of the magic happens in the HTML view
+under the fragment shader.
+*/
+		let beta = Math.random() * -1000;
+
+		let container;
+		let camera, scene, renderer;
+		let uniforms;
+
+		let divisor = 1 / 8;
+		let textureFraction = 1 / 1;
+
+		let newmouse = {
+			x: 0,
+			y: 0
+		};
+
+		let loader = new THREE.TextureLoader();
+		let texture, rtTexture, rtTexture2, environment, pooltex;
+		loader.setCrossOrigin("anonymous");
+		loader.load(
+			'https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/noise.png',
+			(tex) => {
+				texture = tex;
+				texture.wrapS = THREE.RepeatWrapping;
+				texture.wrapT = THREE.RepeatWrapping;
+				texture.minFilter = THREE.LinearFilter;
+
+				loader.load(
+					'https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/env_lat-lon.png',
+					function environment_load(tex) {
+						environment = tex;
+						environment.wrapS = THREE.RepeatWrapping;
+						environment.wrapT = THREE.RepeatWrapping;
+						environment.minFilter = THREE.NearestMipMapNearestFilter;
+
+						loader.load(
+							'https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/tiling-mosaic.jpg',
+							//fondo2.jpg
+							function environment_load(tex) {
+								pooltex = tex;
+								pooltex.wrapS = THREE.RepeatWrapping;
+								pooltex.wrapT = THREE.RepeatWrapping;
+								pooltex.minFilter = THREE.NearestMipMapNearestFilter;
+
+								init();
+								animate();
+							}
+						)
+					}
+				);
+			}
+		);
+
+		function init() {
+			container = document.getElementById('container');
+
+			camera = new THREE.Camera();
+			camera.position.z = 1;
+
+			scene = new THREE.Scene();
+
+			var geometry = new THREE.PlaneBufferGeometry(2, 2);
+
+			rtTexture = new THREE.WebGLRenderTarget(Math.floor(window.innerWidth * textureFraction), Math.floor(window.innerHeight * textureFraction), { type: THREE.FloatType, minFilter: THREE.NearestMipMapNearestFilter });
+			rtTexture2 = new THREE.WebGLRenderTarget(Math.floor(window.innerWidth * textureFraction), Math.floor(window.innerHeight * textureFraction), { type: THREE.FloatType, minFilter: THREE.NearestMipMapNearestFilter });
+
+
+			uniforms = {
+				u_time: { type: "f", value: 1.0 },
+				u_resolution: { type: "v2", value: new THREE.Vector2() },
+				u_noise: { type: "t", value: texture },
+				u_buffer: { type: "t", value: rtTexture.texture },
+				u_texture: { type: "t", value: pooltex },
+				u_environment: { type: "t", value: environment },
+				u_mouse: { type: "v3", value: new THREE.Vector3() },
+				u_frame: { type: "i", value: -1. },
+				u_renderpass: { type: 'b', value: false }
+			};
+
+			var material = new THREE.ShaderMaterial({
+				uniforms: uniforms,
+				vertexShader: document.getElementById('vertexShader').textContent,
+				fragmentShader: document.getElementById('fragmentShader').textContent
+			});
+			material.extensions.derivatives = true;
+
+			var mesh = new THREE.Mesh(geometry, material);
+			scene.add(mesh);
+
+			renderer = new THREE.WebGLRenderer();
+			// renderer.setPixelRatio( window.devicePixelRatio );
+
+			container.appendChild(renderer.domElement);
+
+			onWindowResize();
+			window.addEventListener('resize', onWindowResize, false);
+
+
+			document.addEventListener('pointermove', (e) => {
+				let ratio = window.innerHeight / window.innerWidth;
+				if (window.innerHeight > window.innerWidth) {
+					newmouse.x = (e.pageX - window.innerWidth / 2) / window.innerWidth;
+					newmouse.y = (e.pageY - window.innerHeight / 2) / window.innerHeight * -1 * ratio;
+				} else {
+					newmouse.x = (e.pageX - window.innerWidth / 2) / window.innerWidth / ratio;
+					newmouse.y = (e.pageY - window.innerHeight / 2) / window.innerHeight * -1;
+				}
+
+				e.preventDefault();
+			});
+			document.addEventListener('pointerdown', () => {
+				uniforms.u_mouse.value.z = 1;
+			});
+			document.addEventListener('pointerup', () => {
+				uniforms.u_mouse.value.z = 0;
+			});
+		}
+
+		function onWindowResize(event) {
+			renderer.setSize(window.innerWidth, window.innerHeight);
+			uniforms.u_resolution.value.x = renderer.domElement.width;
+			uniforms.u_resolution.value.y = renderer.domElement.height;
+
+			rtTexture = new THREE.WebGLRenderTarget(window.innerWidth * textureFraction, window.innerHeight * textureFraction);
+			rtTexture2 = new THREE.WebGLRenderTarget(window.innerWidth * textureFraction, window.innerHeight * textureFraction);
+
+			uniforms.u_frame.value = -1;
+		}
+
+		function animate(delta) {
+			requestAnimationFrame(animate);
+			render(delta);
+		}
+
+
+
+
+
+		try {
+
+		}
+		catch (e) {
+			let capturer = new CCapture({
+				verbose: true,
+				framerate: 60,
+				// motionBlurFrames: 4,
+				quality: 90,
+				format: 'webm',
+				workersPath: 'js/'
+			});
+		}
+
+		let capturing = false;
+
+		isCapturing = function (val) {
+			if (val === false && window.capturing === true) {
+				capturer.stop();
+				capturer.save();
+			} else if (val === true && window.capturing === false) {
+				capturer.start();
+			}
+			capturing = val;
+		}
+		toggleCapture = function () {
+			isCapturing(!capturing);
+		}
+
+		window.addEventListener('keyup', function (e) { if (e.keyCode == 68) toggleCapture(); });
+
+		let then = 0;
+		function renderTexture(delta) {
+			// let ov = uniforms.u_buff.value;
+
+			let odims = uniforms.u_resolution.value.clone();
+			uniforms.u_resolution.value.x = window.innerWidth * textureFraction;
+			uniforms.u_resolution.value.y = window.innerHeight * textureFraction;
+
+			uniforms.u_buffer.value = rtTexture2.texture;
+
+			uniforms.u_renderpass.value = true;
+
+			//   rtTexture = rtTexture2;
+			//   rtTexture2 = buffer;
+
+			window.rtTexture = rtTexture;
+			renderer.setRenderTarget(rtTexture);
+			renderer.render(scene, camera, rtTexture, true);
+
+			let buffer = rtTexture
+			rtTexture = rtTexture2;
+			rtTexture2 = buffer;
+
+			// uniforms.u_buff.value = ov;
+
+			uniforms.u_buffer.value = rtTexture.texture;
+			uniforms.u_resolution.value = odims;
+			uniforms.u_renderpass.value = false;
+		}
+		function render(delta) {
+			uniforms.u_frame.value++;
+
+			uniforms.u_mouse.value.x += (newmouse.x - uniforms.u_mouse.value.x) * divisor;
+			uniforms.u_mouse.value.y += (newmouse.y - uniforms.u_mouse.value.y) * divisor;
+
+			uniforms.u_time.value = beta + delta * 0.0005;
+			renderer.render(scene, camera);
+			renderTexture();
+
+			if (capturing) {
+				capturer.capture(renderer.domElement);
+			}
+		}
+	</script>
 
 
 </body>
+
 </html>

@@ -1,0 +1,16 @@
+@ngdoc overview
+
+@name Docs Top
+
+@description
+
+<div class="jumbotron">
+	<h1>Documentación BIOS boiler!</h1>
+</div>
+
+## Contents
+
+### API
+<a href="api">here</a>.
+
+

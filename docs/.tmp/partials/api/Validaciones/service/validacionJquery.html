@@ -1,0 +1,152 @@
+
+
+
+
+<header class="api-profile-header">
+  <h1 class="api-profile-header-heading">validacionJquery</h1>
+  <ol class="api-profile-header-structure naked-list step-list">
+    
+  
+
+    <li>
+      - service in module <a href=""></a>
+    </li>
+  </ol>
+</header>
+
+
+
+<div class="api-profile-description">
+  <p>Servicio para generar validaciones a los formularios.</p>
+
+</div>
+
+
+
+
+<div>
+  
+
+    
+
+  
+
+  
+<h2>Methods</h2>
+<ul class="methods">
+  <li id="fn_getCamposEditables">
+    <h3><p><code>fn_getCamposEditables(array, data);</code></p>
+
+</h3>
+    <div><p>Se validan individualmente los campos para la libreria de la edición de campos en la misma. Se debe agregar un atributo llamado validación en el campo a editar, luego se llama este factory <br> posibles valores:
+    <pre>
+    required<br>
+    minlength=number<br>
+    maxlength=number<br>
+    date<br>
+    email<br>
+    numeric<br>
+    minlength<br>
+    equalTo=string|number
+    range=numer1-number2
+    domain_email=domain ej bios.co
+    </pre>
+    se debe incluir en el campo los siguientes atributos ej:
+    <pre>&lt;a  href=&#39;#&#39; editable-text=&#39;user.name&#39; e-label=&#39;User Name&#39; onbeforesave=&#39;validacion.fn_getCamposEditables(this[&#39;$editable&#39;].attrs.validacion, $data)&#39;&#39; validacion=&#39;required&#39;&gt;{{user.name}}</a></pre>
+    donde <pre>validacion=&#39;required&#39;</pre> corresponde a los elementos a validar, y <pre>validacion.fn_getCamposEditables</pre> en primera instancia &#39;validacion&#39; es una variable $scope que contiene el factory en el controller(esto solo para los campos dinámicos editables), y se llama la función
+ <br>Para validar un formulario, es necesario la inyección de la directiva correspondiente.
+ <br> Es indispensable tener todo esto dentro de una etiqueta form y dentro del botón que ejecuta la función o el submit del formulario.. 
+ <pre>ng-disabled=&quot;nombre_formulario.$invalid&quot;</pre><br></p>
+</div>
+
+    
+    <h4>Parameters</h4>
+    
+<table class="variables-matrix input-arguments ">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        array
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-array">Array</a>
+      </td>
+      <td>
+        <p>contiene el array de las validaciones que son puestas en el atributo &quot;validacion&quot;.</p>
+
+        
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        data
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-string">String</a>
+      </td>
+      <td>
+        <p>Corresponde al string a evaluar.</p>
+
+        
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+    
+
+    
+    
+    
+    <h4>Returns</h4>
+    <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-string">string</a></td>
+    <td><p>mensaje de validación en caso de error o true en caso de estar correcto</p>
+</td>
+  </tr>
+</table>
+    
+
+  </li>
+  
+  <li id="fn_validarForm">
+    <h3><p><code>fn_validarForm();</code></p>
+
+</h3>
+    <div><p>Se cargan los textos personalizados y la instanacia para generar las validaciones.</p>
+</div>
+
+    
+
+    
+    
+    
+
+  </li>
+  </ul>
+  
+  
+
+
+
+  
+</div>
+
+
