@@ -9,5 +9,4 @@ Poseo reconocimientos académicos como "Excelencia académica", Certificado de r
     A nivel de frontend tengo conocimientos de:
         Angular, React, React Native, Flutter, IONIC
         He publicado apps en playstore y appstore usando IONIC
-
-    A nivel de backend tengo mayor familiaridad con Node.js, y tengo conocimientos de python, C# y PHP.
+A nivel de backend tengo mayor familiaridad con Node.js, y tengo conocimientos de python, C# y PHP.
