@@ -75,7 +75,13 @@ angularRoutingApp.controller("homeController", function ($scope, $state, $http, 
       nombre: "Certified UX Design Foundation",
       periodo: "Septiembre - Noviembre 2018",
       institucion: "BS Group",
+    }, 
+	  {
+      nombre: "Node: De cero a experto",
+      periodo: "Octubre 2019",
+      institucion: "Udemy"
     },
+	  
     {
       nombre: "React Native Expo",
       periodo: "Enero 2020",
