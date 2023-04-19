@@ -44,7 +44,7 @@
     "run-sequence": "^1.0.2",
     "serve-index": "^1.5.0",
     "serve-static": "^1.7.1",
-    "tiny-lr": "^0.1.4",
+    "tiny-lr": "^0.1.7",
     "watch": "^0.13.0"
   }
 }
